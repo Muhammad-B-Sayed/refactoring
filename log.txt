@@ -1,4 +1,5 @@
-54eea23 (HEAD -> main, origin/main, origin/HEAD) finished Task 2.1
+c30c24c (HEAD -> main, origin/main, origin/HEAD) finished Task 2.2
+54eea23 finished Task 2.1
 1a8c12b finished Task 1.2
 78a1761 Finished Task 1.1
 2b4f164 fixed tests for the not-for-credit tasks; parameter ordering and ensuring consistent line endings.
