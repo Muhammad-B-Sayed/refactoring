@@ -39,13 +39,7 @@ public class StatementPrinter {
         for (Performance performance : invoice.getPerformances()) {
 
             // add volume credits
-            volumeCredits += Math.max(
-                    performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
-            // add extra credit for every five comedy attendees
-            if ("comedy".equals(getPlay(performance).getType())) {
-                volumeCredits += performance.getAudience()
-                        / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
-            }
+            volumeCredits += getVolumeCredits(performance);
 
             // print line for this order
             result.append(String.format(
@@ -99,11 +93,28 @@ public class StatementPrinter {
                             * (performance.getAudience()
                             - Constants.COMEDY_AUDIENCE_THRESHOLD));
                 }
-                result += Constants.COMEDY_AMOUNT_PER_AUDIENCE * performance.getAudience();
+                result += Constants.COMEDY_AMOUNT_PER_AUDIENCE
+                        * performance.getAudience();
                 break;
             default:
                 throw new RuntimeException(
                         String.format("unknown type: %s", getPlay(performance).getType()));
+        }
+        return result;
+    }
+
+    /**
+     * Calculates the volume credits earned for a single performance.
+     *
+     * @param performance the performance to calculate volume credits for
+     * @return the volume credits earned for this performance
+     */
+    private int getVolumeCredits(Performance performance) {
+        int result = Math.max(
+                performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
+        if ("comedy".equals(getPlay(performance).getType())) {
+            result += performance.getAudience()
+                    / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
         }
         return result;
     }

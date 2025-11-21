@@ -1,4 +1,5 @@
-1a8c12b (HEAD -> main, origin/main, origin/HEAD) finished Task 1.2
+54eea23 (HEAD -> main, origin/main, origin/HEAD) finished Task 2.1
+1a8c12b finished Task 1.2
 78a1761 Finished Task 1.1
 2b4f164 fixed tests for the not-for-credit tasks; parameter ordering and ensuring consistent line endings.
 ff5004e adding shortcut keys for Inline Variable (Re: Piazza question)
