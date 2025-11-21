@@ -1,8 +1,8 @@
-78a1761 (HEAD -> main, origin/main, origin/HEAD) Finished Task 1.1
+1a8c12b (HEAD -> main, origin/main, origin/HEAD) finished Task 1.2
+78a1761 Finished Task 1.1
 2b4f164 fixed tests for the not-for-credit tasks; parameter ordering and ensuring consistent line endings.
 ff5004e adding shortcut keys for Inline Variable (Re: Piazza question)
 b545fe2 clarifying extracted method names in README.md
 a0124c9 fixing starter file
 c8d9d38 adding starter files
 cbe4517 first commit
-
